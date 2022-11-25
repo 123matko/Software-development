@@ -9,6 +9,7 @@ public class HelloController {
 
     @FXML
     protected void onHelloButtonClick() {
+
         welcomeText.setText("This will be login screen!");
     }
 }

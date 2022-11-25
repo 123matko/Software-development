@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dayplanner.RegistrationController">
+   <Button fx:id="register" layoutX="274.0" layoutY="315.0" mnemonicParsing="false" text="Register" onAction="#onRegisterButtonClick"/>
+   <TextField fx:id="username" alignment="CENTER" layoutX="229.0" layoutY="151.0" text="username"/>
+   <TextField fx:id="password" alignment="CENTER" layoutX="229.0" layoutY="200.0" text="password"/>
+   <TextField fx:id="passwordconf" alignment="CENTER" layoutX="229.0" layoutY="237.0" text="confirm password"/>
+</AnchorPane>
