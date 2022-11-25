@@ -5,42 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4507478c-460f-408c-8f76-f0210fc4ad57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/RegistrationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/login-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/registration-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/day-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/main-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/april.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/namedays/april.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/april.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/august.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/namedays/august.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/august.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/december.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/namedays/december.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/december.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/february.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/namedays/february.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/february.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/january.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/namedays/january.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/january.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/july.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/namedays/july.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/july.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/june.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/namedays/june.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/june.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/march.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/namedays/march.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/march.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/may.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/namedays/may.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/may.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/november.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/namedays/november.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/november.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/october.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/namedays/october.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/october.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/september.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/namedays/september.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../namedays/september.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/registration-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/registration-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -69,21 +37,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_directory_selection": "D:/Mato/skola_erasmus/software/Software-development/DayPlanner/src/main/java/com/example/dayplanner",
-    "last_opened_file_path": "D:/Mato/skola_erasmus/software/Software-development/DayPlanner/src/main/resources/com/example/dayplanner/login-view.fxml",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.25632185",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_directory_selection&quot;: &quot;D:/Mato/skola_erasmus/software/Software-development/DayPlanner/src/main/java/com/example/dayplanner&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Mato/skola_erasmus/software/Software-development/DayPlanner/src/main/resources/com/example/dayplanner/login-view.fxml&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.25632185&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -96,7 +64,8 @@
       <workItem from="1669056721771" duration="519000" />
       <workItem from="1669303738688" duration="166000" />
       <workItem from="1669377908348" duration="390000" />
-      <workItem from="1669378367957" duration="5514000" />
+      <workItem from="1669378367957" duration="6016000" />
+      <workItem from="1669384533103" duration="562000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1669045502390</created>
@@ -112,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669046132003</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="registration">
+      <created>1669384043787</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669384043787</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +98,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="Little changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Little changes" />
+    <MESSAGE value="registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="registration" />
   </component>
 </project>
