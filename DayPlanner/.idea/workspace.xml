@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4507478c-460f-408c-8f76-f0210fc4ad57" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +65,7 @@
       <workItem from="1669378367957" duration="6016000" />
       <workItem from="1669384533103" duration="858000" />
       <workItem from="1669458298860" duration="4557000" />
-      <workItem from="1669473577350" duration="9858000" />
+      <workItem from="1669473577350" duration="10187000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1669045502390</created>
@@ -103,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669464199566</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="main screen">
+      <created>1669484777105</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669484777105</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +122,7 @@
     <MESSAGE value="registration" />
     <MESSAGE value="layouts" />
     <MESSAGE value="layout change after registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="layout change after registration" />
+    <MESSAGE value="main screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="main screen" />
   </component>
 </project>

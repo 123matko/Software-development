@@ -28,7 +28,7 @@ public class MainController implements Initializable {
         if(day!=0) {
             calendarPane.add(sat, day-1, weak);
         }
-        System.out.println(days.length);
+
 
 
     }
