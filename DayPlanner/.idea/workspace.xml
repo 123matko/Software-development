@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4507478c-460f-408c-8f76-f0210fc4ad57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/day-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/main-view.fxml" afterDir="false" />
+    <list default="true" id="4507478c-460f-408c-8f76-f0210fc4ad57" name="Changes" comment="layouts">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/main-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/registration-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/registration-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -65,7 +68,8 @@
       <workItem from="1669303738688" duration="166000" />
       <workItem from="1669377908348" duration="390000" />
       <workItem from="1669378367957" duration="6016000" />
-      <workItem from="1669384533103" duration="562000" />
+      <workItem from="1669384533103" duration="858000" />
+      <workItem from="1669458298860" duration="3794000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1669045502390</created>
@@ -88,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669384043787</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="layouts">
+      <created>1669385348876</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669385348876</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +110,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="Little changes" />
     <MESSAGE value="registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="registration" />
+    <MESSAGE value="layouts" />
+    <option name="LAST_COMMIT_MESSAGE" value="layouts" />
   </component>
 </project>

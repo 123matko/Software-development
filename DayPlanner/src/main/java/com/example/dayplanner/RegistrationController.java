@@ -1,12 +1,19 @@
 package com.example.dayplanner;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 
 import java.io.*;
 import java.util.List;
+import java.util.Objects;
 
 import com.opencsv.*;
+import javafx.stage.Stage;
+
 
 public class RegistrationController {
     @FXML
@@ -33,12 +40,8 @@ public class RegistrationController {
             }catch (Exception e){
                 e.printStackTrace();
             }
-
-
         }else {
             try {
-
-
                 fileReader = new FileReader(users);
                 outputStream = new FileWriter(users);
                 writer = new CSVWriter(outputStream);
@@ -60,10 +63,19 @@ public class RegistrationController {
             idOfLast++;
             String[] data1 = { String.valueOf(idOfLast), usernametext, passwordtext };
             writer.writeNext(data1);
-
+            writer.close();
             System.out.println(" registered!");
+            try {
+                Parent fxmlLoader = FXMLLoader.load(getClass().getResource("main-view.fxml"));
+                Scene scene = new Scene(fxmlLoader);
+                Stage stage= (Stage) username.getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }else {
+            writer.close();
         }
-        writer.close();
-
     }
 }
