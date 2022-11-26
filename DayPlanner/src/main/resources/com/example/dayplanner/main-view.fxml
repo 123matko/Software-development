@@ -9,7 +9,7 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <GridPane layoutX="93.0" layoutY="79.0" prefHeight="210.0" prefWidth="417.0">
+                  <GridPane fx:id="calendarPane" layoutX="93.0" layoutY="79.0" prefHeight="210.0" prefWidth="417.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
