@@ -5,8 +5,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 
 import java.net.URL;
 import java.util.*;
@@ -31,7 +35,9 @@ public class MainController implements Initializable {
             for (int j = 1; j < thatDay.getActualMaximum(Calendar.DAY_OF_MONTH) + 1; j++) {
 
                 Button days = new Button(String.valueOf(j ));
-                days.setStyle( "-fx-background-color: #ffffff;-fx-border-style: solid;  -fx-border-width: 6px;-fx-pref-width: 124px;-fx-pref-height:124px; ");
+                days.setBackground(new Background(new BackgroundFill(Color.WHITE,null,null)));
+                //days.setStyle("-fx-background-color: white;");
+                days.setStyle( "-fx-border-style: solid; -fx-border-width: 6px;-fx-pref-width: 124px;-fx-pref-height:124px; ");
                 thatDay = new GregorianCalendar(rightNow.get(Calendar.YEAR), i, j );
 
                 if(j==1){
