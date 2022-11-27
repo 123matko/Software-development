@@ -14,5 +14,5 @@
     <TextField fx:id="username" alignment="CENTER" layoutX="229.0" layoutY="151.0" text="username"/>
     <TextField fx:id="password" alignment="CENTER" layoutX="229.0" layoutY="200.0" text="password"/>
 
-    <Button fx:id="Login" layoutX="274.0" layoutY="315.0" mnemonicParsing="false" text="Login"/>
+    <Button fx:id="Login" layoutX="274.0" layoutY="315.0" onAction="#onLoginButtonClick" mnemonicParsing="false" text="Login"/>
 </AnchorPane>
