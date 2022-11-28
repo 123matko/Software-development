@@ -25,7 +25,7 @@ public class MainController implements Initializable {
 
         Calendar rightNow = Calendar.getInstance();
         VBox root = new VBox();
-        Calendar thatDay = new GregorianCalendar(rightNow.get(Calendar.YEAR), 0, 1);
+        Calendar thatDay ;
         for (int i=0;i<12;i++) {
             GridPane calendarPane = new GridPane();
             Label month = new Label();
@@ -33,11 +33,13 @@ public class MainController implements Initializable {
             System.out.print(thatDay.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH)+": ");
             System.out.println(thatDay.getActualMaximum(Calendar.DAY_OF_MONTH));
             for (int j = 1; j < thatDay.getActualMaximum(Calendar.DAY_OF_MONTH) + 1; j++) {
-
-                Button days = new Button(String.valueOf(j ));
+                Button days = new Button(String.valueOf(j));
                 days.setBackground(new Background(new BackgroundFill(Color.WHITE,null,null)));
                 //days.setStyle("-fx-background-color: white;");
-                days.setStyle( "-fx-border-style: solid; -fx-border-width: 6px;-fx-pref-width: 124px;-fx-pref-height:124px; ");
+                days.setPrefWidth(80);
+                days.setPrefHeight(80);
+
+                days.setStyle( "-fx-border-style: solid; -fx-border-width: 6px; ");
                 thatDay = new GregorianCalendar(rightNow.get(Calendar.YEAR), i, j );
 
                 if(j==1){
