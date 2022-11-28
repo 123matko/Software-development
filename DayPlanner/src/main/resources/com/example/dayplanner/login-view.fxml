@@ -11,8 +11,9 @@
             fx:controller="com.example.dayplanner.LoginController"
             prefHeight="500.0" prefWidth="800.0">
 
-    <TextField fx:id="username" alignment="CENTER" layoutX="229.0" layoutY="151.0" text="username"/>
-    <TextField fx:id="password" alignment="CENTER" layoutX="229.0" layoutY="200.0" text="password"/>
+    <TextField fx:id="username" alignment="CENTER" layoutX="229.0" layoutY="151.0" text="username" AnchorPane.leftAnchor="329.0" AnchorPane.rightAnchor="321.66666666666663"/>
+    <TextField fx:id="password" alignment="CENTER" layoutX="229.0" layoutY="200.0" text="password" AnchorPane.leftAnchor="329.0" AnchorPane.rightAnchor="321.66666666666663"/>
 
-    <Button fx:id="Login" layoutX="274.0" layoutY="315.0" onAction="#onLoginButtonClick" mnemonicParsing="false" text="Login"/>
+    <Button fx:id="Login" layoutX="274.0" layoutY="315.0" onAction="#onLoginButtonClick" mnemonicParsing="false" text="Login" AnchorPane.leftAnchor="329.0" AnchorPane.rightAnchor="321.66666666666663"/>
+    <Button fx:id="Register" layoutX="274.0" layoutY="365.0" onAction="#onRegisterButtonClick" mnemonicParsing="false" text="Register new account" AnchorPane.leftAnchor="329.0" AnchorPane.rightAnchor="321.66666666666663"/>
 </AnchorPane>

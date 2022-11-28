@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -31,6 +32,7 @@ public class RegistrationController {
         FileWriter outputStream ;
         FileReader fileReader;
         CSVWriter writer = null;
+        List<String[]> allData= new ArrayList<>();
         int idOfLast = -1;
         if(!users.exists()){
             try {
@@ -43,14 +45,16 @@ public class RegistrationController {
         }else {
             try {
                 fileReader = new FileReader(users);
-                outputStream = new FileWriter(users);
-                writer = new CSVWriter(outputStream);
+
 
                 CSVReader csvReader = new CSVReaderBuilder(fileReader)
-                        .withSkipLines(1)
+                        .withSkipLines(0)
                         .build();
-                List<String[]> allData = csvReader.readAll();
-                idOfLast = Integer.parseInt(allData.get(allData.size() - 1)[0]);
+                allData = csvReader.readAll();
+                fileReader.close();
+                idOfLast = allData.size()-1;
+                outputStream = new FileWriter(users);
+                writer = new CSVWriter(outputStream);
             }catch (Exception e){
                 e.printStackTrace();
             }
@@ -61,8 +65,11 @@ public class RegistrationController {
         System.out.println(writer.checkError());
         if(passwordtext.equals(passwordconftext)){
             idOfLast++;
+
             String[] data1 = { String.valueOf(idOfLast), usernametext, passwordtext };
-            writer.writeNext(data1);
+            allData.add(data1);
+            System.out.println(allData.size());
+            writer.writeAll(allData);
             writer.close();
             System.out.println(" registered!");
             try {

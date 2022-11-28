@@ -3,6 +3,7 @@ package com.example.dayplanner;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.opencsv.CSVWriter;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -36,13 +37,16 @@ public class LoginController {
         ListIterator<String[]>listIterator = allData.listIterator();
         boolean isRegistered = false;
         String[] tmp;
+
         while(listIterator.hasNext()){
             tmp = listIterator.next();
+
             if(tmp[1].equals(usernametext) && tmp[2].equals(passwordtext)){
                 isRegistered = true;
                 break;
             }
         }
+
 
         if(isRegistered){
             try {
@@ -54,6 +58,18 @@ public class LoginController {
             }catch (Exception e){
                 e.printStackTrace();
             }
+        }
+    }
+
+    public void onRegisterButtonClick(ActionEvent actionEvent) {
+        try {
+            Parent fxmlLoader = FXMLLoader.load(getClass().getResource("registration-view.fxml"));
+            Scene scene = new Scene(fxmlLoader);
+            Stage stage= (Stage) username.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 }
