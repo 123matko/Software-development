@@ -3,9 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dayplanner.RegistrationController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dayplanner.RegistrationController">
    <Button fx:id="register" layoutX="274.0" layoutY="315.0" mnemonicParsing="false" onAction="#onRegisterButtonClick" text="Register" AnchorPane.leftAnchor="329.0" AnchorPane.rightAnchor="321.66666666666663" />
-   <TextField fx:id="username" alignment="CENTER" layoutX="229.0" layoutY="151.0" prefHeight="25.0" prefWidth="149.0" text="username" AnchorPane.bottomAnchor="323.6666666666667" AnchorPane.leftAnchor="329.0" AnchorPane.rightAnchor="321.66666666666663" AnchorPane.topAnchor="151.0" />
-   <TextField fx:id="password" alignment="CENTER" layoutX="229.0" layoutY="200.0" text="password" AnchorPane.leftAnchor="329.0" AnchorPane.rightAnchor="321.66666666666663" />
-   <TextField fx:id="passwordconf" alignment="CENTER" layoutX="229.0" layoutY="237.0" text="confirm password" AnchorPane.leftAnchor="329.0" AnchorPane.rightAnchor="321.66666666666663"/>
+   <TextField fx:id="username" alignment="CENTER" layoutX="229.0" layoutY="151.0" prefHeight="25.0" prefWidth="149.0" promptText="Username" AnchorPane.bottomAnchor="323.6666666666667" AnchorPane.leftAnchor="329.0" AnchorPane.rightAnchor="321.66666666666663" AnchorPane.topAnchor="151.0" />
+   <PasswordField fx:id="password" alignment="CENTER" layoutX="229.0" layoutY="200.0" promptText="password" AnchorPane.leftAnchor="329.0" AnchorPane.rightAnchor="321.66666666666663" />
+   <PasswordField fx:id="passwordconf" alignment="CENTER" layoutX="229.0" layoutY="237.0" promptText="confirm password" AnchorPane.leftAnchor="329.0" AnchorPane.rightAnchor="321.66666666666663" />
 </AnchorPane>

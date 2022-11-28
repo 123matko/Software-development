@@ -30,8 +30,6 @@ public class MainController implements Initializable {
             GridPane calendarPane = new GridPane();
             Label month = new Label();
             thatDay = new GregorianCalendar(rightNow.get(Calendar.YEAR), i, 1);
-            System.out.print(thatDay.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH)+": ");
-            System.out.println(thatDay.getActualMaximum(Calendar.DAY_OF_MONTH));
             for (int j = 1; j < thatDay.getActualMaximum(Calendar.DAY_OF_MONTH) + 1; j++) {
                 Button days = new Button(String.valueOf(j));
                 days.setBackground(new Background(new BackgroundFill(Color.WHITE,null,null)));
@@ -63,17 +61,12 @@ public class MainController implements Initializable {
                 if(rightNow.get(Calendar.DAY_OF_MONTH)==j&& rightNow.get(Calendar.MONTH)==i){
                     days.setStyle("-fx-border-color: #FF7F41;");
                 }
-
             }
             root.getChildren().add(month);
             root.getChildren().add(calendarPane);
-
         }
         scrollPane.setContent(root);
         scrollPane.setPannable(true);
-
-
-
     }
 
 

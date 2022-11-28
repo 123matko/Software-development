@@ -62,16 +62,15 @@ public class RegistrationController {
         String usernametext= username.getText();
         String passwordtext = password.getText();
         String passwordconftext = passwordconf.getText();
-        System.out.println(writer.checkError());
         if(passwordtext.equals(passwordconftext)){
             idOfLast++;
 
             String[] data1 = { String.valueOf(idOfLast), usernametext, passwordtext };
             allData.add(data1);
-            System.out.println(allData.size());
             writer.writeAll(allData);
             writer.close();
-            System.out.println(" registered!");
+            System.out.println("Registered!");
+            System.out.println("Username: "+ usernametext+", Password: "+passwordtext);
             try {
                 Parent fxmlLoader = FXMLLoader.load(getClass().getResource("main-view.fxml"));
                 Scene scene = new Scene(fxmlLoader);
