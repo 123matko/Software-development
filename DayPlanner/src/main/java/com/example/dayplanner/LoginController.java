@@ -6,6 +6,7 @@ import com.opencsv.CSVWriter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
@@ -15,15 +16,22 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URL;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.ResourceBundle;
 
-public class LoginController {
+public class LoginController implements Initializable {
 
     @FXML
     private TextField username;
     @FXML
     private PasswordField password;
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+      username.setFocusTraversable(false);
+      password.setFocusTraversable(false);
+    }
 
     @FXML
     protected void onLoginButtonClick() throws IOException{
