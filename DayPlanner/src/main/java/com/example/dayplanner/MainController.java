@@ -1,7 +1,10 @@
 package com.example.dayplanner;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -11,6 +14,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.*;
@@ -31,14 +35,29 @@ public class MainController implements Initializable {
             Label month = new Label();
             thatDay = new GregorianCalendar(rightNow.get(Calendar.YEAR), i, 1);
             for (int j = 1; j < thatDay.getActualMaximum(Calendar.DAY_OF_MONTH) + 1; j++) {
+
+                thatDay = new GregorianCalendar(rightNow.get(Calendar.YEAR), i, j );
                 Button days = new Button(String.valueOf(j));
+                Calendar finalThatDay = (Calendar) thatDay.clone();
+                days.setOnMouseClicked(mouseEvent -> {
+                    try {
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("day-view.fxml"));
+                        DayController controller = new DayController(finalThatDay);
+                        fxmlLoader.setController(controller);
+                        Scene scene = new Scene(fxmlLoader.load());
+                        Stage stage= (Stage) root.getScene().getWindow();
+                        stage.setScene(scene);
+                        stage.show();
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                });
                 days.setBackground(new Background(new BackgroundFill(Color.WHITE,null,null)));
                 //days.setStyle("-fx-background-color: white;");
                 days.setPrefWidth(80);
                 days.setPrefHeight(80);
 
                 days.setStyle( "-fx-border-style: solid; -fx-border-width: 6px; ");
-                thatDay = new GregorianCalendar(rightNow.get(Calendar.YEAR), i, j );
 
                 if(j==1){
                     String monthName = thatDay.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH);

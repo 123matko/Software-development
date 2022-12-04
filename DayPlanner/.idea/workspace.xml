@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4507478c-460f-408c-8f76-f0210fc4ad57" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/DayController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/day-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/day-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +69,8 @@
       <workItem from="1669458298860" duration="4557000" />
       <workItem from="1669473577350" duration="13612000" />
       <workItem from="1669644452228" duration="2901000" />
+      <workItem from="1669709356065" duration="75000" />
+      <workItem from="1670159865601" duration="5601000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1669045502390</created>
@@ -133,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669567757621</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="change focus on login screen">
+      <created>1669649813025</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669649813025</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +159,7 @@
     <MESSAGE value="removed error" />
     <MESSAGE value="add buttons for whole year" />
     <MESSAGE value="change color" />
-    <option name="LAST_COMMIT_MESSAGE" value="change color" />
+    <MESSAGE value="change focus on login screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="change focus on login screen" />
   </component>
 </project>
