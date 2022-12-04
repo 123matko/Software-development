@@ -5,10 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4507478c-460f-408c-8f76-f0210fc4ad57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/DayController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/AddTaskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/addTask-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/DayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/DayController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/day-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/day-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/april.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/april.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/august.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/august.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/december.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/december.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/february.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/february.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/january.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/january.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/july.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/july.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/june.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/june.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/march.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/march.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/may.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/may.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/november.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/november.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/october.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/october.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/september.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/september.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/users.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +67,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Mato\skola_erasmus\software\Software-development\DayPlanner" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -70,7 +90,8 @@
       <workItem from="1669473577350" duration="13612000" />
       <workItem from="1669644452228" duration="2901000" />
       <workItem from="1669709356065" duration="75000" />
-      <workItem from="1670159865601" duration="5601000" />
+      <workItem from="1670159865601" duration="14459000" />
+      <workItem from="1670176666538" duration="1141000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1669045502390</created>
@@ -142,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669649813025</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="day view">
+      <created>1670167209925</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670167209925</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +188,7 @@
     <MESSAGE value="add buttons for whole year" />
     <MESSAGE value="change color" />
     <MESSAGE value="change focus on login screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="change focus on login screen" />
+    <MESSAGE value="day view" />
+    <option name="LAST_COMMIT_MESSAGE" value="day view" />
   </component>
 </project>

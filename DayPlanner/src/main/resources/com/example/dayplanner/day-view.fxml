@@ -2,10 +2,15 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="dateLabel" layoutX="386.0" layoutY="177.0" />
-      <Button fx:id="backButton" layoutX="45.0" layoutY="165.0" mnemonicParsing="false" text="Back" />
+      <Label fx:id="dateLabel" layoutX="361.0" layoutY="44.0" prefHeight="17.0" prefWidth="78.0" />
+      <Button fx:id="backButton" layoutX="20.0" layoutY="461.0" mnemonicParsing="false" text="Back" />
+      <Button fx:id="previousButton" layoutX="86.0" layoutY="40.0" mnemonicParsing="false" text="Previous" />
+      <Button fx:id="nextButton" layoutX="664.0" layoutY="40.0" mnemonicParsing="false" text="Next" />
+      <Line endX="-8.5" endY="435.0" layoutX="86.0" layoutY="65.0" startX="-8.5" startY="-65.0" />
+      <Button fx:id="newTaskButton" layoutX="15.0" layoutY="28.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="49.0" text="New task" textAlignment="CENTER" wrapText="true" />
    </children>
 </AnchorPane>

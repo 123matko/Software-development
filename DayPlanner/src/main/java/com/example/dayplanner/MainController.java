@@ -1,5 +1,7 @@
 package com.example.dayplanner;
 
+import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -16,6 +18,10 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
@@ -35,9 +41,20 @@ public class MainController implements Initializable {
             Label month = new Label();
             thatDay = new GregorianCalendar(rightNow.get(Calendar.YEAR), i, 1);
             for (int j = 1; j < thatDay.getActualMaximum(Calendar.DAY_OF_MONTH) + 1; j++) {
+                String monthName="";
+                String currentName;
 
+                monthName = thatDay.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH);
+                if(j==1){
+                    month.setText(monthName);
+                }
+                try {
+                    currentName = getCurrentName(j,monthName.toLowerCase());
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
                 thatDay = new GregorianCalendar(rightNow.get(Calendar.YEAR), i, j );
-                Button days = new Button(String.valueOf(j));
+                Button days = new Button(String.valueOf(j)+"\n"+currentName);
                 Calendar finalThatDay = (Calendar) thatDay.clone();
                 days.setOnMouseClicked(mouseEvent -> {
                     try {
@@ -59,12 +76,7 @@ public class MainController implements Initializable {
 
                 days.setStyle( "-fx-border-style: solid; -fx-border-width: 6px; ");
 
-                if(j==1){
-                    String monthName = thatDay.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH);
 
-                    month.setText(monthName);
-
-                }
                 int day = thatDay.get(Calendar.DAY_OF_WEEK);
                 int weak = thatDay.get(Calendar.WEEK_OF_MONTH);
                 //System.out.println(j + "," + day + "," + weak);
@@ -84,8 +96,35 @@ public class MainController implements Initializable {
             root.getChildren().add(month);
             root.getChildren().add(calendarPane);
         }
+
         scrollPane.setContent(root);
         scrollPane.setPannable(true);
+        System.out.println((scrollPane.getHmax()/12.0)*(rightNow.get(Calendar.MONTH)+1));
+
+        scrollPane.setVvalue((scrollPane.getHmax()/12.0)*(rightNow.get(Calendar.MONTH)+1));
+    }
+
+    private String getCurrentName(int j, String monthName) throws IOException {
+        File file = new File("namedays/"+monthName+".csv");
+        FileReader fileReader = new FileReader(file);
+        CSVReader csvReader = new CSVReaderBuilder(fileReader).withSkipLines(1).build();
+        List<String[]> allData = csvReader.readAll();
+
+
+        ListIterator<String[]>listIterator = allData.listIterator();
+        String name = "";
+        String[] tmp;
+
+        while(listIterator.hasNext()){
+            tmp = listIterator.next();
+            //System.out.println(tmp[1]);
+            if(tmp[0].equals(String.valueOf(j))){
+                name = tmp[1];
+
+            }
+        }
+        //System.out.println(name);
+        return name;
     }
 
 
