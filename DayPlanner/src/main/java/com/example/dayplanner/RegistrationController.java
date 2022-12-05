@@ -47,8 +47,6 @@ public class RegistrationController {
         }else {
             try {
                 fileReader = new FileReader(users);
-
-
                 CSVReader csvReader = new CSVReaderBuilder(fileReader)
                         .withSkipLines(0)
                         .build();

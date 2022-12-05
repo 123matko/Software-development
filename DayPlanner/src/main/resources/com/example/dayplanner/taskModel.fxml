@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="50.0" prefWidth="490" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <Label fx:id="timeLabel" layoutY="4.0" prefHeight="41.0" prefWidth="77.0" text="Label" />
+      <Label fx:id="nameLabel" layoutX="77.0" layoutY="5.0" prefHeight="41.0" prefWidth="324.0" text="Label" />
+       <Label fx:id="doneLabel" layoutX="405.0" layoutY="5.0" prefHeight="41.0" prefWidth="85.0" text="Label" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

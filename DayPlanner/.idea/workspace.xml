@@ -5,25 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4507478c-460f-408c-8f76-f0210fc4ad57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/AddTaskController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/addTask-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/TaskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/TaskModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/taskModel.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasks/December.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasks/January.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/AddTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/AddTaskController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/DayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/DayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/addTask-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/addTask-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/day-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dayplanner/day-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/april.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/april.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/august.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/august.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/december.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/december.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/february.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/february.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/january.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/january.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/july.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/july.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/june.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/june.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/march.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/march.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/may.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/may.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/november.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/november.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/october.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/october.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/namedays/september.csv" beforeDir="false" afterPath="$PROJECT_DIR$/namedays/september.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/users.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670167209925</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add task view">
+      <created>1670232607788</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670232607788</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +188,7 @@
     <MESSAGE value="change color" />
     <MESSAGE value="change focus on login screen" />
     <MESSAGE value="day view" />
-    <option name="LAST_COMMIT_MESSAGE" value="day view" />
+    <MESSAGE value="add task view" />
+    <option name="LAST_COMMIT_MESSAGE" value="add task view" />
   </component>
 </project>

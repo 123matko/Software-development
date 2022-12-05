@@ -1,5 +1,7 @@
 package com.example.dayplanner;
 
+import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,15 +10,19 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.net.URL;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class DayController implements Initializable {
-    private Calendar calendar;
+    private final Calendar calendar;
 
     public DayController (Calendar calendar){
         super();
@@ -33,10 +39,18 @@ public class DayController implements Initializable {
     private Button previousButton;
     @FXML
     private Button newTaskButton;
+    @FXML
+    private ScrollPane taskList;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println(calendar.get(Calendar.DAY_OF_MONTH)+"."+calendar.get(Calendar.MONTH)+"."+calendar.get(Calendar.YEAR));
         dateLabel.setText(calendar.get(Calendar.DAY_OF_MONTH)+"."+(calendar.get(Calendar.MONTH)+1)+"."+calendar.get(Calendar.YEAR));
+        try {
+            initializeTasks();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         backButton.setOnMouseClicked(mouseEvent ->{
             try {
                 Parent fxmlLoader = FXMLLoader.load(getClass().getResource("main-view.fxml"));
@@ -89,6 +103,53 @@ public class DayController implements Initializable {
         });
     }
 
+    public void initializeTasks() throws IOException {
+        String monthName = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH);
+        File file = new File("tasks/"+monthName+".csv");
 
+        FileReader fileReader;
+        VBox root = new VBox();
+        List<String[]> allData= new ArrayList<>();
+        if(file.exists()) {
+            try {
+                fileReader = new FileReader(file);
+                CSVReader csvReader = new CSVReaderBuilder(fileReader)
+                        .withSkipLines(0)
+                        .build();
+                allData = csvReader.readAll();
+                fileReader.close();
+
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        String taskName = "";
+        String time = "";
+        boolean done = false;
+        boolean isActual = false;
+        ListIterator<String[]>listIterator = allData.listIterator();
+        String[] tmp;
+        while(listIterator.hasNext()){
+            isActual=false;
+            tmp = listIterator.next();
+            System.out.println(tmp[1]);
+            if(tmp[0].equals(String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)))){
+                time=tmp[1];
+                taskName=tmp[2];
+                done= Boolean.getBoolean(tmp[3]);
+                Calendar now = Calendar.getInstance();
+                int hour = now.get(Calendar.HOUR_OF_DAY);
+                if(calendar.before(now)) {
+                    if(Integer.parseInt(time.split(":")[0])==hour) {
+                        isActual = true;
+                    }
+                }
+                System.out.println(time.split(":")[0]+" , "+hour+"="+isActual);
+                root.getChildren().add(new TaskModel(time,taskName,done,isActual));
+
+            }
+        }
+       taskList.setContent(root);
+    }
 
 }
