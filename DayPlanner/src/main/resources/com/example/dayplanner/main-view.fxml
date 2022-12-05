@@ -3,9 +3,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dayplanner.MainController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dayplanner.MainController">
    <children>
       <ScrollPane fx:id="scrollPane" layoutX="95.0" layoutY="14.0" prefHeight="450.0" prefWidth="700.0" />
       <HBox layoutX="55.0" layoutY="325.0" prefHeight="74.0" prefWidth="539.0" />
+      <Button layoutX="14.0" layoutY="461.0" mnemonicParsing="false" onAction="#onLogOutButtonClick" text="Log Out" />
    </children>
 </AnchorPane>

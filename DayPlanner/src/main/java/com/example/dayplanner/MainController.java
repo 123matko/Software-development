@@ -30,6 +30,9 @@ public class MainController implements Initializable {
     @FXML
     private ScrollPane scrollPane;
 
+    @FXML
+    private Button logOutBtn;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -102,6 +105,18 @@ public class MainController implements Initializable {
         System.out.println((scrollPane.getHmax()/12.0)*(rightNow.get(Calendar.MONTH)+1));
 
         scrollPane.setVvalue((scrollPane.getHmax()/12.0)*(rightNow.get(Calendar.MONTH)+1));
+    }
+    @FXML
+    protected void onLogOutButtonClick(){
+        try {
+            Parent fxmlLoader = FXMLLoader.load(getClass().getResource("login-view.fxml"));
+            Scene scene = new Scene(fxmlLoader);
+            Stage stage= (Stage) scrollPane.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     private String getCurrentName(int j, String monthName) throws IOException {
