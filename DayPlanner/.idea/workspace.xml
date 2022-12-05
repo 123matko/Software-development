@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4507478c-460f-408c-8f76-f0210fc4ad57" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/AddTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/AddTaskController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/DayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/DayController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/TaskController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/TaskModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dayplanner/TaskModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/December.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/December.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/January.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/January.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +79,7 @@
       <workItem from="1669709356065" duration="75000" />
       <workItem from="1670159865601" duration="14459000" />
       <workItem from="1670176666538" duration="1141000" />
-      <workItem from="1670245904733" duration="2125000" />
+      <workItem from="1670245904733" duration="5021000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1669045502390</created>
@@ -172,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670239432830</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="task sort">
+      <created>1670248048595</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670248048595</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +200,7 @@
     <MESSAGE value="day view" />
     <MESSAGE value="add task view" />
     <MESSAGE value="add tasks" />
-    <option name="LAST_COMMIT_MESSAGE" value="add tasks" />
+    <MESSAGE value="task sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="task sort" />
   </component>
 </project>

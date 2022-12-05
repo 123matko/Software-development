@@ -57,8 +57,8 @@ public class AddTaskController implements Initializable {
             isValid=isValid();
             String monthName = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH);
             File file = new File("tasks/"+monthName+".csv");
-            FileWriter outputStream;
             FileReader fileReader;
+            FileWriter outputStream;
             CSVWriter writer = null;
             List<String[]> allData= new ArrayList<>();
             if(!file.exists()){
@@ -86,7 +86,7 @@ public class AddTaskController implements Initializable {
             String taskNameText = taskName.getText();
             int hourValue = hour.getValue();
             int minuteValue = minute.getValue();
-            String time = hourValue+":"+minuteValue;
+            String time = hourValue+":"+(minuteValue<10?"0"+minuteValue:minuteValue);
 
             System.out.println(isValid);
             if(isValid) {

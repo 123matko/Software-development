@@ -137,9 +137,10 @@ public class DayController implements Initializable {
             tmp = listIterator.next();
             System.out.println(tmp[1]);
             if(tmp[0].equals(String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)))){
+                System.out.println(Arrays.toString(tmp));
                 time=tmp[1];
                 taskName=tmp[2];
-                done= Boolean.getBoolean(tmp[3]);
+                done= tmp[3].equals("true");
                 Calendar now = Calendar.getInstance();
                 int hour = now.get(Calendar.HOUR_OF_DAY);
                 if(calendar.before(now)) {
