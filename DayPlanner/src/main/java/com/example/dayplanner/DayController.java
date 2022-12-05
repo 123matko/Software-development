@@ -127,10 +127,13 @@ public class DayController implements Initializable {
         String time = "";
         boolean done = false;
         boolean isActual = false;
+
         ListIterator<String[]>listIterator = allData.listIterator();
         String[] tmp;
+        ArrayList<TaskModel> tasks= new ArrayList<TaskModel>();
         while(listIterator.hasNext()){
             isActual=false;
+
             tmp = listIterator.next();
             System.out.println(tmp[1]);
             if(tmp[0].equals(String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)))){
@@ -145,9 +148,21 @@ public class DayController implements Initializable {
                     }
                 }
                 System.out.println(time.split(":")[0]+" , "+hour+"="+isActual);
-                root.getChildren().add(new TaskModel(time,taskName,done,isActual));
+                tasks.add(new TaskModel(time,taskName,done,isActual));
 
             }
+        }
+        tasks.sort(new Comparator<TaskModel>() {
+            @Override
+            public int compare(TaskModel o1, TaskModel o2) {
+                if (o1.getTime() < o2.getTime()) {
+                    return -1;
+                }
+                return 1;
+            }
+        });
+        for(TaskModel task:tasks) {
+            root.getChildren().add(task);
         }
        taskList.setContent(root);
     }
