@@ -12,7 +12,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -55,7 +57,7 @@ public class DayController implements Initializable {
             try {
                 Parent fxmlLoader = FXMLLoader.load(getClass().getResource("main-view.fxml"));
                 Scene scene = new Scene(fxmlLoader);
-                Stage stage= (Stage) dateLabel.getScene().getWindow();
+                Stage stage = (Stage) dateLabel.getScene().getWindow();
                 stage.setScene(scene);
                 stage.show();
             }catch (Exception e){
@@ -101,6 +103,54 @@ public class DayController implements Initializable {
                 e.printStackTrace();
             }
         });
+        notificationPopUp();
+    }
+
+    public void notificationPopUp(){
+        Calendar calendar= Calendar.getInstance();
+        String monthName = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH);
+        File file = new File("tasks/"+monthName+".csv");
+
+        FileReader fileReader;
+        List<String[]> allData= new ArrayList<>();
+        if(file.exists()) {
+            try {
+                fileReader = new FileReader(file);
+                CSVReader csvReader = new CSVReaderBuilder(fileReader)
+                        .withSkipLines(0)
+                        .build();
+                allData = csvReader.readAll();
+                fileReader.close();
+
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        String timeU="";
+        ListIterator<String[]> listIterator = allData.listIterator();
+        String[] tmp;
+        ArrayList<TaskModel> tasks= new ArrayList<TaskModel>();
+        int i=0;
+        int taskToUpdate = 0;
+        while(listIterator.hasNext()){
+            tmp = listIterator.next();
+            if(tmp[0].equals(String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)))){
+                int timediff = (Integer.parseInt(tmp[1].split(":")[1]) - calendar.get(Calendar.MINUTE) );
+                if( timediff <= 5 && timediff >= 0 && (Integer.parseInt(tmp[1].split(":")[0]) - calendar.get(Calendar.HOUR_OF_DAY) ) == 0) {
+                    System.out.println("Inside");
+                    Label secondLabel = new Label(tmp[1] + " -> " + tmp[2]);
+                    StackPane secondaryLayout = new StackPane();
+                    secondaryLayout.getChildren().add(secondLabel);
+                    Scene secondScene = new Scene(secondaryLayout, 230, 100);
+                    Stage newWindow = new Stage();
+                    newWindow.setTitle("Reminder");
+                    newWindow.setScene(secondScene);
+                    newWindow.show();
+                    newWindow.setAlwaysOnTop(true);
+                }
+            }
+            i++;
+        }
     }
 
     public void initializeTasks() throws IOException {
