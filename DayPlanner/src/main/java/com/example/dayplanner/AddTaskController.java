@@ -6,7 +6,6 @@ import com.opencsv.CSVWriter;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -99,7 +98,6 @@ public class AddTaskController implements Initializable {
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-                System.out.println("saved!");
                 backToDayView();
             }else {
                 errorLabel.setText("In this time you already have one task!");
@@ -157,7 +155,8 @@ public class AddTaskController implements Initializable {
         }
         return true;
     }
-    
+
+    //Return
     public void backToDayView(){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("day-view.fxml"));

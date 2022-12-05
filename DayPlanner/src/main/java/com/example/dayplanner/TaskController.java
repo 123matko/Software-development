@@ -6,7 +6,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 
 import java.io.IOException;
 import java.net.URL;
@@ -42,19 +41,21 @@ public class TaskController implements Initializable {
         timeLabel.setText(time);
         nameLabel.setText(name);
         doneLabel.setText(done?"DONE":"NOT YET");
-        doneLabel.setOnMouseClicked(mouseEvent -> {
+        doneLabel.setOnMouseClicked(mouseEvent -> {         //After clicking on done status label set status of task to done
             try {
                 taskModel.setDone();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         });
+        //if is task actual set colour of time label and done status label to orange
         if(isActual){
             Background background = new Background(new BackgroundFill(Color.rgb(255,127,65),null,null));
             timeLabel.setBackground(background);
             doneLabel.setBackground(background);
 
         }
+        //if is task done set colour of time label and done status label to green
         if(done){
             Background background = new Background(new BackgroundFill(Color.rgb(51,196,179),null,null));
             timeLabel.setBackground(background);

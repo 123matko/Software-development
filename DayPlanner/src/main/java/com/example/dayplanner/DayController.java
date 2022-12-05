@@ -2,7 +2,6 @@ package com.example.dayplanner;
 
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -10,11 +9,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -23,6 +20,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
+/*In day view user can see all task for current day, add new, switch to next or previous day.
+ *For day view we created constructor with argument calendar thanks that we can extract all needed data for reading tasks for this day.*/
 public class DayController implements Initializable {
     private final Calendar calendar;
 
@@ -43,6 +42,7 @@ public class DayController implements Initializable {
     private Button newTaskButton;
     @FXML
     private ScrollPane taskList;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println(calendar.get(Calendar.DAY_OF_MONTH)+"."+calendar.get(Calendar.MONTH)+"."+calendar.get(Calendar.YEAR));
@@ -106,6 +106,7 @@ public class DayController implements Initializable {
         notificationPopUp();
     }
 
+    //If task will start in less than 5 minutes the popup window show up as reminder of this task
     public void notificationPopUp(){
         Calendar calendar= Calendar.getInstance();
         String monthName = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH);
@@ -130,8 +131,7 @@ public class DayController implements Initializable {
         ListIterator<String[]> listIterator = allData.listIterator();
         String[] tmp;
         ArrayList<TaskModel> tasks= new ArrayList<TaskModel>();
-        int i=0;
-        int taskToUpdate = 0;
+
         while(listIterator.hasNext()){
             tmp = listIterator.next();
             if(tmp[0].equals(String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)))){
@@ -149,10 +149,11 @@ public class DayController implements Initializable {
                     newWindow.setAlwaysOnTop(true);
                 }
             }
-            i++;
+
         }
     }
 
+    //Read all task for actual moth and filters just those for current day. Then sort them by time of task.
     public void initializeTasks() throws IOException {
         String monthName = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH);
         File file = new File("tasks/"+monthName+".csv");
@@ -183,11 +184,8 @@ public class DayController implements Initializable {
         ArrayList<TaskModel> tasks= new ArrayList<TaskModel>();
         while(listIterator.hasNext()){
             isActual=false;
-
             tmp = listIterator.next();
-            System.out.println(tmp[1]);
             if(tmp[0].equals(String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)))){
-                System.out.println(Arrays.toString(tmp));
                 time=tmp[1];
                 taskName=tmp[2];
                 done= tmp[3].equals("true");
@@ -198,7 +196,6 @@ public class DayController implements Initializable {
                         isActual = true;
                     }
                 }
-                System.out.println(time.split(":")[0]+" , "+hour+"="+isActual);
                 tasks.add(new TaskModel(time,taskName,done,isActual));
 
             }

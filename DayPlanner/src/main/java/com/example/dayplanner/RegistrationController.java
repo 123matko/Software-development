@@ -1,22 +1,21 @@
 package com.example.dayplanner;
 
+import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
+import com.opencsv.CSVWriter;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-import java.io.*;
-import java.net.URL;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-import java.util.ResourceBundle;
-
-import com.opencsv.*;
-import javafx.stage.Stage;
 
 
 public class RegistrationController {
@@ -27,7 +26,8 @@ public class RegistrationController {
     @FXML
     private TextField passwordconf;
 
-
+    /*New user can register himself even when file users.csv exist that is why we test if first.
+    * If this file exist we load data to get number of id for next user, then we store all data back to csv file.*/
     @FXML
     protected void onRegisterButtonClick() throws IOException {
         File users = new File("users.csv");
@@ -62,7 +62,8 @@ public class RegistrationController {
         String usernametext= username.getText();
         String passwordtext = password.getText();
         String passwordconftext = passwordconf.getText();
-        if(passwordtext.equals(passwordconftext)){
+
+        if(passwordtext.equals(passwordconftext)){                      //New user can be registered only if password and confirm password match
             idOfLast++;
 
             String[] data1 = { String.valueOf(idOfLast), usernametext, passwordtext };
@@ -71,7 +72,7 @@ public class RegistrationController {
             writer.close();
             System.out.println("Registered!");
             System.out.println("Username: "+ usernametext+", Password: "+passwordtext);
-            try {
+            try {                                                       //After successful registration view is changed to main view.
                 Parent fxmlLoader = FXMLLoader.load(getClass().getResource("main-view.fxml"));
                 Scene scene = new Scene(fxmlLoader);
                 Stage stage= (Stage) username.getScene().getWindow();

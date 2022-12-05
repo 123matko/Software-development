@@ -15,12 +15,9 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
@@ -34,17 +31,21 @@ public class MainController implements Initializable {
     @FXML
     private Button logOutBtn;
 
+    /*In main view user can see calendar for whole year for that reason we need create buttons for every day and
+    layout them in to right place in order by day of week.
+    To layout them in right order we needed know for every day which day of week it is. For this we have chosen Calendar class
+    which has methods for getting day of month, day of week, month, year,hour and minutes.
+    Main view contains scroll pane inside which we add grid panes with correctly layout days.*/
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        Calendar rightNow = Calendar.getInstance();
+        Calendar rightNow = Calendar.getInstance();         //This method returns calendar instance of today with time of current hour and minute
         VBox root = new VBox();
         Calendar thatDay ;
         for (int i=0;i<12;i++) {
             GridPane calendarPane = new GridPane();
             Label month = new Label();
-            thatDay = new GregorianCalendar(rightNow.get(Calendar.YEAR), i, 1);
-            for (int j = 1; j < thatDay.getActualMaximum(Calendar.DAY_OF_MONTH) + 1; j++) {
+            thatDay = new GregorianCalendar(rightNow.get(Calendar.YEAR), i, 1);         //GregorianCalendar is subclass of Calendar and allow us to define exact day.
+            for (int j = 1; j < thatDay.getActualMaximum(Calendar.DAY_OF_MONTH) + 1; j++) {        //First for is for moths and we know exactly that we have just 12 moths but every month has different number of days, and we need this information for second for.
                 String monthName="";
                 String currentName;
 
@@ -60,7 +61,7 @@ public class MainController implements Initializable {
                 thatDay = new GregorianCalendar(rightNow.get(Calendar.YEAR), i, j );
                 Button days = new Button(String.valueOf(j)+"\n"+currentName);
                 Calendar finalThatDay = (Calendar) thatDay.clone();
-                days.setOnMouseClicked(mouseEvent -> {
+                days.setOnMouseClicked(mouseEvent -> {                                                          //For every day in month we set event handler that redirects user to day-view
                     try {
                         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("day-view.fxml"));
                         DayController controller = new DayController(finalThatDay);
@@ -85,15 +86,14 @@ public class MainController implements Initializable {
                 int weak = thatDay.get(Calendar.WEEK_OF_MONTH);
                 //System.out.println(j + "," + day + "," + weak);
 
-                if (day != 1) {
+                if (day != 1) {                                                                 //If day of week has value 1 it means it's sunday if current day is not sunday we set border colour to blue
                     days.setStyle("-fx-border-color: #15BDD8;");
                     calendarPane.add(days, day - 2, weak);
                 } else {
-                    days.setStyle(" -fx-border-color: #FF3E3E; ");
-
+                    days.setStyle(" -fx-border-color: #FF3E3E; ");                              //Border colour of sundays is set to red
                     calendarPane.add(days, 6, weak);
                 }
-                if(rightNow.get(Calendar.DAY_OF_MONTH)==j&& rightNow.get(Calendar.MONTH)==i){
+                if(rightNow.get(Calendar.DAY_OF_MONTH)==j&& rightNow.get(Calendar.MONTH)==i){   //If day we are adding is today we set border colour to orange
                     days.setStyle("-fx-border-color: #FF7F41;");
                 }
             }
@@ -103,12 +103,9 @@ public class MainController implements Initializable {
 
         scrollPane.setContent(root);
         scrollPane.setPannable(true);
-        System.out.println((scrollPane.getHmax()/12.0)*(rightNow.get(Calendar.MONTH)+1));
-
-        scrollPane.setVvalue((scrollPane.getHmax()/12.0)*(rightNow.get(Calendar.MONTH)+1));
     }
     @FXML
-    protected void onLogOutButtonClick(){
+    protected void onLogOutButtonClick(){                                       //Return user to login screen
         try {
             Parent fxmlLoader = FXMLLoader.load(getClass().getResource("login-view.fxml"));
             Scene scene = new Scene(fxmlLoader);
@@ -120,12 +117,12 @@ public class MainController implements Initializable {
         }
     }
 
+    //Load names from names-day file for current month
     private String getCurrentName(int j, String monthName) throws IOException {
         File file = new File("namedays/"+monthName+".csv");
         FileReader fileReader = new FileReader(file);
         CSVReader csvReader = new CSVReaderBuilder(fileReader).withSkipLines(1).build();
         List<String[]> allData = csvReader.readAll();
-
 
         ListIterator<String[]>listIterator = allData.listIterator();
         String name = "";
@@ -133,13 +130,10 @@ public class MainController implements Initializable {
 
         while(listIterator.hasNext()){
             tmp = listIterator.next();
-            //System.out.println(tmp[1]);
             if(tmp[0].equals(String.valueOf(j))){
                 name = tmp[1];
-
             }
         }
-        //System.out.println(name);
         return name;
     }
 

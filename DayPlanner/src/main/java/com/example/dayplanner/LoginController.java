@@ -2,7 +2,6 @@ package com.example.dayplanner;
 
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
-import com.opencsv.CSVWriter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -33,6 +32,8 @@ public class LoginController implements Initializable {
       password.setFocusTraversable(false);
     }
 
+    /*When user tries to log in we read all data from users.csv file.
+    If given username exist and match password then we redirect user to main view. */
     @FXML
     protected void onLoginButtonClick() throws IOException{
         File users = new File("users.csv");
@@ -70,6 +71,7 @@ public class LoginController implements Initializable {
         }
     }
 
+    //When user click on registration button we change view to registration-view
     public void onRegisterButtonClick(ActionEvent actionEvent) {
         try {
             Parent fxmlLoader = FXMLLoader.load(getClass().getResource("registration-view.fxml"));
