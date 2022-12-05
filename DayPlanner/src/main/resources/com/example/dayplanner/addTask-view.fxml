@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.dayplanner.AddTaskController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="saveButton" layoutX="241.0" layoutY="370.0" mnemonicParsing="false" text="Save" />
+      <Button fx:id="cancelButton" cancelButton="true" layoutX="492.0" layoutY="370.0" mnemonicParsing="false" text="Cancel" />
+      <TextField fx:id="taskName" alignment="CENTER" layoutX="316.0" layoutY="154.0" prefHeight="25.0" prefWidth="147.0" promptText="Task name" />
+      <Label fx:id="dayLabel" layoutX="376.0" layoutY="39.0" text="Label" />
+      <Spinner fx:id="hour" editable="true" layoutX="324.0" layoutY="100.0" max="24" min="0" prefHeight="25.0" prefWidth="51.0" />
+      <Spinner fx:id="minute" layoutX="404.0" layoutY="100.0" max="59" min="0" prefHeight="25.0" prefWidth="51.0" />
+      <Label layoutX="388.0" layoutY="104.0" text=":" />
 
+   </children>
 </AnchorPane>

@@ -75,7 +75,17 @@ public class DayController implements Initializable {
             }
         });
         newTaskButton.setOnMouseClicked(mouseEvent -> {
-
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("addTask-view.fxml"));
+                AddTaskController controller = new AddTaskController(calendar);
+                fxmlLoader.setController(controller);
+                Scene scene = new Scene(fxmlLoader.load());
+                Stage stage= (Stage) nextButton.getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
         });
     }
 
